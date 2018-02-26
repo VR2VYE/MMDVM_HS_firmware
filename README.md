@@ -11,7 +11,7 @@ sudo systemctl stop mmdvmhost.service
 
 cd ~
 
-curl -OL curl -OL https://raw.github.com/VR2VYE/fw_nanohs_for_rpi/master/install_fw_nanohs_for_rpi.sh
+curl -OL https://raw.github.com/VR2VYE/fw_nanohs_for_rpi/master/install_fw_nanohs_for_rpi.sh
 
 make the script executable:
 
