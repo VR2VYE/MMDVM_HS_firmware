@@ -3,12 +3,6 @@ Download the script (*.sh) that matches with your ZUMspot/MMDVM_HS board:
 
 install_fw_nanohs_for_rpi.sh :Only adapted to nano_hotSPOT for raspberry pi
 
-sudo pistar-watchdog.service stop
-
-sudo systemctl stop mmdvmhost.timer
-
-sudo systemctl stop mmdvmhost.service
-
 cd ~
 
 curl -OL https://raw.github.com/VR2VYE/fw_nanohs_for_rpi/master/install_fw_nanohs_for_rpi.sh
