@@ -28,7 +28,7 @@ FW_VERSION="v1.3.3"
 MAC_DEV_USB_SER="/dev/cu.usbmodem1441"
 	
 # Download latest firmware for Nano hotSPOT
-curl -OL https://github.com/juribeparada/MMDVM_HS/releases/download/$FW_VERSION/nano_hotspot_fw.bin
+curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/mmdvm_duplex_fw.bin
 
 # Download STM32F10X_Lib (only for binary tools)
 if [ ! -d "./STM32F10X_Lib/utils" ]; then
@@ -75,7 +75,7 @@ if [ $(uname -s) == "Darwin" ]; then
 fi
 
 # Upload the firmware
-eval sudo $STM32FLASH -v -w nano_hotspot_fw.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
+eval sudo $STM32FLASH -v -w mmdvm_duplex_fw.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
 
 #reboot system
 sudo reboot
