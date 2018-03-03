@@ -16,11 +16,6 @@
 #   along with this program; if not, write to the Free Software
 #   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-# Stop MMDVMHost process to free serial port
-sudo pistar-watchdog.service stop
-sudo systemctl stop mmdvmhost.timer
-sudo systemctl stop mmdvmhost.service
-
 # Configure latest version
 FW_VERSION="v1.3.3"
 
@@ -74,11 +69,8 @@ if [ $(uname -s) == "Darwin" ]; then
 	STM32FLASH="./STM32F10X_Lib/utils/macosx/stm32flash"
 fi
 
+# Stop MMDVMHost process to free serial port
+sudo killall MMDVMHost >/dev/null 2>&1
+
 # Upload the firmware
 eval sudo $STM32FLASH -v -w mmdvm_duplex_fw.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
-
-rm mmdvm_duplex_fw.bin
-rm -r STM32F10X_Lib
-rm install_fw_duplex.sh
-
-reboot
