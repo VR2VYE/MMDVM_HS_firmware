@@ -80,3 +80,5 @@ eval sudo $STM32FLASH -v -w nano_hotspot_fw.bin -g 0x0 -R -i 23,-22,22:-23,22 /d
 rm nano_hotspot_fw.bin
 rm -r STM32F10X_Lib
 rm install_fw_nanohs_for_rpi.sh
+
+reboot
