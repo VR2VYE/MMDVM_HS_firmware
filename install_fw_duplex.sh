@@ -22,12 +22,12 @@ FW_VERSION="v1.3.3"
 # Change USB-serial port name ONLY in macOS
 MAC_DEV_USB_SER="/dev/cu.usbmodem1441"
 	
-# Download latest firmware for Nano hotSPOT
+# Download latest firmware for MMDVM_DUPLEX
 curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/mmdvm_duplex_fw.bin
 
 # Download STM32F10X_Lib (only for binary tools)
 if [ ! -d "./STM32F10X_Lib/utils" ]; then
-  git clone https://github.com/juribeparada/STM32F10X_Lib
+  git clone https://github.com/VR2VYE/STM32F10X_Lib
 fi
 
 # Configure vars depending on OS
