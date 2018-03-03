@@ -77,5 +77,6 @@ fi
 # Upload the firmware
 eval sudo $STM32FLASH -v -w mmdvm_duplex_fw.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
 
-#reboot system
-sudo reboot
+rm mmdvm_duplex_fw.bin
+rm -r STM32F10X_Lib
+rm install_fw_duplex.sh
