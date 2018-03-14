@@ -13,6 +13,14 @@ make the script executable:
 
 chmod +x install_fw_nanohs_for_rpi.sh
 
+If you are using Pi-Star, stop services:
+
+sudo pistar-watchdog.service stop
+
+sudo systemctl stop mmdvmhost.timer
+
+sudo systemctl stop mmdvmhost.service
+
 stop your MMDVMHost process and run (you will need the root password):
 
 ./install_fw_nanohs_for_rpi.sh
