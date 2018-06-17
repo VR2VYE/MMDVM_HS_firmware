@@ -5,7 +5,7 @@ install_fw_duplex.sh :Adapted to the duplex board
 
 install_fw_nanohs_for_rpi.sh :Only adapted to nano_hotSPOT for raspberry pi
 
-cd ~
+cd /tmp
 
 curl -OL https://raw.github.com/VR2VYE/MMDVM_HS_firmware/master/install_fw_nanohs_for_rpi.sh
 
