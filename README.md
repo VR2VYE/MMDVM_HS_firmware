@@ -7,7 +7,7 @@ install_fw_nanohs_for_rpi.sh :Only adapted to nano_hotSPOT for raspberry pi
 
 cd ~
 
-curl -OL https://raw.github.com/VR2VYE/fw_nanohs_for_rpi/master/install_fw_nanohs_for_rpi.sh
+curl -OL https://raw.github.com/VR2VYE/MMDVM_HS_firmware/master/install_fw_nanohs_for_rpi.sh
 
 make the script executable:
 
