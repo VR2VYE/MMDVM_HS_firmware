@@ -47,7 +47,7 @@ then
     rm -rf /tmp/nanodualfirmware 2> /dev/null
     mkdir /tmp/nanohdualfirmware 2> /dev/null
     echo "Flashing your ${1} modem to the latest version"
-    curl -s -L https://github.com/VR2VYE/MMDVM_HS/releases/latest | egrep -o '/VR2VYE/MMDVM_HS/releases/download/v[0-9.]*/install_fw_duplex.sh' | wget --base=http://github.com/ -i - -O /tmp/nanohsfirmware/flash.sh
+    curl -s -L https://github.com/VR2VYE/MMDVM_HS_firmware/releases/latest | egrep -o '/VR2VYE/MMDVM_HS_firmware/releases/download/v[0-9.]*/install_fw_duplex.sh' | wget --base=http://github.com/ -i - -O /tmp/nanohsfirmware/flash.sh
     chmod +x /tmp/nanodualfirmware/flash.sh
     cd  /tmp/nanodualfirmware
     ./flash.sh
