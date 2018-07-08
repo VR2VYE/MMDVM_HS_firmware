@@ -1,5 +1,5 @@
 Linux or macOS
-Download the script (*.sh) that matches with your ZUMspot/MMDVM_HS board:
+Download the script (*.sh) that matches with your nano hotspot/duplex hotspot board:
 
 install_fw_duplex.sh :Adapted to the duplex board
 
