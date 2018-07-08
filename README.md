@@ -1,4 +1,5 @@
-Linux or macOS
+Linux or macOS  version：v1.4.0
+
 Download the script (*.sh) that matches with your nano hotspot/duplex hotspot board:
 
 install_fw_duplex.sh :Adapted to the duplex board
