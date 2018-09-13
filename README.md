@@ -8,11 +8,11 @@ install_fw_nanohs_for_rpi.sh :Only adapted to nano_hotSPOT for raspberry pi
 
 cd /tmp
 
-curl -OL https://raw.github.com/VR2VYE/MMDVM_HS_firmware/master/install_fw_nanohs_for_rpi.sh
+curl -OL https://raw.github.com/VR2VYE/MMDVM_HS_firmware/master/install_fw_duplex.sh
 
 make the script executable:
 
-chmod +x install_fw_nanohs_for_rpi.sh
+chmod +x install_fw_duplex.sh
 
 If you are using Pi-Star, stop services:
 
@@ -24,6 +24,6 @@ sudo systemctl stop mmdvmhost.service
 
 stop your MMDVMHost process and run (you will need the root password):
 
-./install_fw_nanohs_for_rpi.sh
+./install_fw_duplex.sh
 
 and wait to complete the upgrading process.
