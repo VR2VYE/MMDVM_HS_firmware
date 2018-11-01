@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-Linux or macOS  version:v1.4.11
-=======
-Linux or macOS  version¡Gv1.4.10
->>>>>>> parent of 2369c3a... Update README.md
+Linux or macOS  version:v1.4.10
 
 Download the script (*.sh) that matches with your nano hotspot/duplex hotspot board:
 
