@@ -2,6 +2,8 @@ Linux or macOS  version:v1.4.14
 
 Download the script (*.sh) that matches with your nano hotspot/duplex hotspot board:
 
+install_fw_hshat.sh :MMDVM_HS_Hat board
+
 install_fw_duplex.sh :Adapted to the duplex board
 
 install_fw_nanohs_for_rpi.sh :Only adapted to nano_hotSPOT for raspberry pi
