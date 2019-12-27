@@ -1,4 +1,4 @@
-Linux or macOS   version:v1.4.17
+Linux or macOS   version:v1.5.1b
 
 Download the script (*.sh) that matches with your nano hotspot/duplex hotspot board:
 
