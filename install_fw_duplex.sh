@@ -23,7 +23,7 @@ FW_VERSION="v1.5.1b"
 MAC_DEV_USB_SER="/dev/cu.usbmodem14401"
 	
 # Download latest firmware for MMDVM_HS_Hat
-https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/mmdvm_duplex_fw.bin
+curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/mmdvm_duplex_fw.bin
 
 # Download STM32F10X_Lib (only for binary tools)
 if [ ! -d "./STM32F10X_Lib/utils" ]; then
