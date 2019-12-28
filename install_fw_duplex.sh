@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#   Copyright (C) 2018 by Andy Uribe CA6JAU
+#   Copyright (C) 2017,2018 by Andy Uribe CA6JAU
 
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -17,17 +17,17 @@
 #   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 # Configure latest version
-FW_VERSION="v1.4.17"
+FW_VERSION="v1.5.1b"
 
 # Change USB-serial port name ONLY in macOS
 MAC_DEV_USB_SER="/dev/cu.usbmodem14401"
 	
-# Download latest firmware for MMDVM_DUPLEX
-curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/mmdvm_duplex_fw.bin
+# Download latest firmware for MMDVM_HS_Hat
+https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/mmdvm_duplex_fw.bin
 
 # Download STM32F10X_Lib (only for binary tools)
 if [ ! -d "./STM32F10X_Lib/utils" ]; then
-  git clone https://github.com/VR2VYE/STM32F10X_Lib
+  git clone https://github.com/juribeparada/STM32F10X_Lib
 fi
 
 # Configure vars depending on OS
@@ -72,3 +72,4 @@ sudo killall MMDVMHost >/dev/null 2>&1
 
 # Upload the firmware
 eval sudo $STM32FLASH -v -w mmdvm_duplex_fw.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
+
