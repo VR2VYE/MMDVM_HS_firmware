@@ -71,5 +71,5 @@ fi
 sudo killall MMDVMHost >/dev/null 2>&1
 
 # Upload the firmware
-eval sudo $STM32FLASH -v -w mmdvm_duplex_fw.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
+eval sudo $STM32FLASH -v -w mmdvm_duplex_fw.bin -g 0x0 -R -i  20,-21,21:-20,21 /dev/ttyAMA0
 
