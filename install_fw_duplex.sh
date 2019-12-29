@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#   Copyright (C) 2017,2018 by Andy Uribe CA6JAU
+#   Copyright (C) 2017,2018,2019 by Andy Uribe CA6JAU
 
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -17,17 +17,26 @@
 #   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 # Configure latest version
-FW_VERSION="v1.5.1b"
+FW_VERSION="v1.4.17"
 
-# Change USB-serial port name ONLY in macOS
-MAC_DEV_USB_SER="/dev/cu.usbmodem14401"
+# Configure beta version
+FW_VERSION_BETA="v1.5.1b"
+
+# Firmware filename
+FW_FILENAME="zumspot_duplex_fw.bin"
 	
-# Download latest firmware for MMDVM_HS_Hat
-curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/mmdvm_duplex_fw.bin
+# Download latest firmware
+if [ $1 = "beta" ]; then
+	echo "Downloading beta firmware..."
+	curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION_BETA/$FW_FILENAME
+else
+	echo "Downloading latest firmware (stable)..."
+	curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/$FW_FILENAME
+fi
 
 # Download STM32F10X_Lib (only for binary tools)
-if [ ! -d "./STM32F10X_Lib/utils" ]; then 
-  git clone https://github.com/VR2VYE/STM32F10X_Lib
+if [ ! -d "./STM32F10X_Lib/utils" ]; then
+  git clone https://github.com/juribeparada/STM32F10X_Lib
 fi
 
 # Configure vars depending on OS
@@ -71,5 +80,4 @@ fi
 sudo killall MMDVMHost >/dev/null 2>&1
 
 # Upload the firmware
-eval sudo $STM32FLASH -v -w mmdvm_duplex_fw.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
-
+eval sudo $STM32FLASH -v -w $FW_FILENAME -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
