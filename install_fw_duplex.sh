@@ -17,7 +17,7 @@
 #   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 # Configure latest version
-# FW_VERSION="v1.4.17"
+FW_VERSION="v1.4.17"
 
 # Configure beta version
 FW_VERSION_BETA="v1.5.1b"
@@ -29,10 +29,10 @@ FW_FILENAME="mmdvm_duplex_fw.bin"
 if [ $1 = "beta" ]; then
 	echo "Downloading beta firmware..."
 	curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION_BETA/$FW_FILENAME
-# else
-#	echo "Downloading latest firmware (stable)..."
-#	curl -OL 
-# https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/$FW_FILENAME
+else
+	echo "Downloading latest firmware (stable)..."
+	curl -OL 
+https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/$FW_FILENAME
 fi
 
 # Download STM32F10X_Lib (only for binary tools)
