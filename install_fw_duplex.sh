@@ -23,7 +23,7 @@ FW_VERSION="v1.4.17"
 FW_VERSION_BETA="v1.5.1b"
 
 # Firmware filename
-FW_FILENAME="zumspot_duplex_fw.bin"
+FW_FILENAME="mmdvm_duplex_fw.bin"
 	
 # Download latest firmware
 if [ $1 = "beta" ]; then
