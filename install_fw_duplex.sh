@@ -31,8 +31,7 @@ if [ $1 = "beta" ]; then
 	curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION_BETA/$FW_FILENAME
 else
 	echo "Downloading latest firmware (stable)..."
-	curl -OL 
-https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/$FW_FILENAME
+	curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/$FW_FILENAME
 fi
 
 # Download STM32F10X_Lib (only for binary tools)
