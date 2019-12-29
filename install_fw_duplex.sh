@@ -26,8 +26,8 @@ MAC_DEV_USB_SER="/dev/cu.usbmodem14401"
 curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/mmdvm_duplex_fw.bin
 
 # Download STM32F10X_Lib (only for binary tools)
-if [ ! -d "./STM32F10X_Lib/utils" ]; then
-  git clone https://github.com/juribeparada/STM32F10X_Lib
+if [ ! -d "./STM32F10X_Lib/utils" ]; then 
+  git clone https://github.com/VR2VYE/STM32F10X_Lib
 fi
 
 # Configure vars depending on OS
@@ -71,5 +71,5 @@ fi
 sudo killall MMDVMHost >/dev/null 2>&1
 
 # Upload the firmware
-eval sudo $STM32FLASH -v -w mmdvm_duplex_fw.bin -g 0x0 -R -i  20,-21,21:-20,21 /dev/ttyAMA0
+eval sudo $STM32FLASH -v -w mmdvm_duplex_fw.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
 
