@@ -16,8 +16,8 @@
 #   along with this program; if not, write to the Free Software
 #   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-# Configure latest version (v1.5.1b)
-FW_VERSION="v1.5.1"
+# Configure latest version (v1.5.2)
+FW_VERSION="v1.5.2"
 
 # Change USB-serial port name ONLY in macOS
 MAC_DEV_USB_SER="/dev/cu.usbmodem14401"
