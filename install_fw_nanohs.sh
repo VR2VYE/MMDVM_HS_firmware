@@ -16,10 +16,10 @@
 #   along with this program; if not, write to the Free Software
 #   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-sudo echo 3 > /sys/class/gpio/export
-sudo echo out > /sys/class/gpio/gpio3/direction
-sudo echo 1 > /sys/class/gpio/gpio3/value
-sudo echo 3 > /sys/class/gpio/unexport
+echo 3 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio3/direction
+echo 1 > /sys/class/gpio/gpio3/value
+echo 3 > /sys/class/gpio/unexport
 
 # Configure latest version
 FW_VERSION="v1.5.2"
