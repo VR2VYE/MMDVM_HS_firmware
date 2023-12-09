@@ -1,31 +1,36 @@
-Linux or macOS   version:v1.5.2
+Update to v1.6.2
+Code from https://repo.w0chp.net/WPSD-Dev/MMDVM_HS-WPSD.git
 
-Download the script (*.sh) that matches with your nano hotspot/duplex hotspot board:
+Hardware: VR2VYE & BI7JTA MMDVM Hat
 
-install_fw_hshat.sh :MMDVM_HS_Hat board
+Quicy flash step,  open your webSSH http://pi-star:2222 (Ver.MW0MWZ), http://pi-star:4200 (Ver.WPSD)
 
-install_fw_duplex.sh :Adapted to the duplex board
+for Duplex hostpot , Raspberry Pi, BPi M2z,
+ 
+sudo curl https://raw.github.com/VR2VYE/MMDVM_HS_firmware/master/install_fw_duplex.sh | sudo sh
 
-install_fw_nanohs_for_rpi.sh :Only adapted to nano_hotSPOT for raspberry pi
 
-cd /tmp
+for Simplex hotspot, Raspberry Pi, BPi M2z,
 
-curl -OL https://raw.github.com/VR2VYE/MMDVM_HS_firmware/master/install_fw_duplex.sh
+sudo curl https://raw.github.com/VR2VYE/MMDVM_HS_firmware/master/install_fw_duplex.sh | sudo sh
 
-make the script executable:
 
-chmod +x install_fw_duplex.sh
+for Nano NEO/AIR hotspot, Simplex, Raspberry Pi, BPi M2z,
 
-If you are using Pi-Star, stop services:
+sudo curl https://raw.github.com/VR2VYE/MMDVM_HS_firmware/master/install_fw_nanohs.sh | sudo sh
 
-sudo pistar-watchdog.service stop
 
-sudo systemctl stop mmdvmhost.timer
+for BPiM2 GPIO, Windows VMWare ttyUSB0, BNW NEO/AIR
 
-sudo systemctl stop mmdvmhost.service
+...
 
-stop your MMDVMHost process and run (you will need the root password):
+for Repeater V3F4 STM32F446, 
 
-./install_fw_duplex.sh
+See also https://www.bi7jta.org/wiki/index.php?title=Main_Page#M17_Mode_FM_build_20230606
 
-and wait to complete the upgrading process.
+
+Discuss: 
+  Hotspot https://www.facebook.com/groups/nano.mmdvm
+  Repeater https://www.facebook.com/groups/v3f446
+  Follow my YouTube: https://www.youtube.com/winters_huang
+  微信: bi7jta73 (公众号)

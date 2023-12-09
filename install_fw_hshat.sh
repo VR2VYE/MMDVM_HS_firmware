@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#   Copyright (C) 2017,2018 by Andy Uribe CA6JAU
+#   Copyright (C) 2018 by Andy Uribe CA6JAU
 
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -16,18 +16,19 @@
 #   along with this program; if not, write to the Free Software
 #   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-# Configure latest version
-FW_VERSION="v1.5.2"
+# Configure latest version (v1.6.1)
+FW_VERSION="v1.6.1"
 
 # Change USB-serial port name ONLY in macOS
 MAC_DEV_USB_SER="/dev/cu.usbmodem14401"
 	
-# Download latest firmware for MMDVM_HS_Hat
-curl -OL https://github.com/juribeparada/MMDVM_HS/releases/download/$FW_VERSION/nano_hotspot_fw.bin
+# Download latest firmware for MMDVM_DUPLEX
+mmdvm_fw_bin="nano_hotspot_hs_Simplex_hat_fw_1.6.1.bin"
+curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/${mmdvm_fw_bin}
 
 # Download STM32F10X_Lib (only for binary tools)
 if [ ! -d "./STM32F10X_Lib/utils" ]; then
-  git clone https://github.com/juribeparada/STM32F10X_Lib
+  git clone https://github.com/VR2VYE/STM32F10X_Lib
 fi
 
 # Configure vars depending on OS
@@ -71,4 +72,4 @@ fi
 sudo killall MMDVMHost >/dev/null 2>&1
 
 # Upload the firmware
-eval sudo $STM32FLASH -v -w nano_hotspot_fw.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
+eval sudo $STM32FLASH -v -w ${mmdvm_fw_bin} -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0

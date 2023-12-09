@@ -16,19 +16,15 @@
 #   along with this program; if not, write to the Free Software
 #   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-echo 3 > /sys/class/gpio/export
-echo out > /sys/class/gpio/gpio3/direction
-echo 1 > /sys/class/gpio/gpio3/value
-echo 3 > /sys/class/gpio/unexport
-
-# Configure latest version
-FW_VERSION="v1.5.2"
+# Configure latest version (v1.6.1)
+FW_VERSION="v1.6.1"
 
 # Change USB-serial port name ONLY in macOS
 MAC_DEV_USB_SER="/dev/cu.usbmodem14401"
 	
-# Download latest firmware for Nano hotSPOT
-curl -OL https://github.com/juribeparada/MMDVM_HS/releases/download/$FW_VERSION/nano_hotspot_fw.bin
+# Download latest firmware for MMDVM_DUPLEX
+mmdvm_fw_bin="nano_hotspot_NEO_fw_1.6.1.bin"
+curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/$FW_VERSION/${mmdvm_fw_bin}
 
 # Download STM32F10X_Lib (only for binary tools)
 if [ ! -d "./STM32F10X_Lib/utils" ]; then
@@ -75,5 +71,5 @@ fi
 # Stop MMDVMHost process to free serial port
 sudo killall MMDVMHost >/dev/null 2>&1
 
-# Upload the firmware
-eval sudo $STM32FLASH -v -w nano_hotspot_fw.bin -g 0x0 -R -i 200,-3,3:-200,3 /dev/ttyAMA0
+# Upload the firmware 
+eval sudo $STM32FLASH -v -w ${mmdvm_fw_bin} -g 0x0 -R -i 200,-3,3:-200,3 /dev/ttyAMA0
