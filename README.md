@@ -7,7 +7,7 @@ Code from`https://repo.w0chp.net/WPSD-Dev/MMDVM_HS-WPSD.git`
 
 Quicy flash step,  open your webSSH `http://pi-star:2222 (Ver.MW0MWZ), http://pi-star:4200 (Ver.WPSD)`
 
-### for Duplex hostpot , Raspberry Pi, BPi M2z,
+### for Duplex hotspot , Raspberry Pi, BPi M2z,
  
 `sudo curl https://raw.github.com/VR2VYE/MMDVM_HS_firmware/master/install_fw_duplex.sh | sudo sh`
 
