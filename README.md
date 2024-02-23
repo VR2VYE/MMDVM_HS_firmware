@@ -9,17 +9,25 @@ Quicy flash step,  open your webSSH `http://pi-star:2222 (Ver.MW0MWZ), http://pi
 
 ### for Duplex hotspot , Raspberry Pi, BPi M2z,
  
-`sudo curl https://raw.github.com/VR2VYE/MMDVM_HS_firmware/master/install_fw_duplex.sh | sudo sh`
-
+`sudo curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/v1.6.1/install_fw_duplex.sh;
+ sudo chmod +x install_fw_duplex.sh;
+ sudo ./install_fw_duplex.sh;
+`
 
 ### for Simplex hotspot, Raspberry Pi, BPi M2z,
 
-`sudo curl https://raw.github.com/VR2VYE/MMDVM_HS_firmware/master/install_fw_duplex.sh | sudo sh`
+`sudo curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/v1.6.1/install_fw_hshat.sh;
+ sudo chmod +x install_fw_hshat.sh;
+ sudo ./install_fw_hshat.sh;
+`
 
 
 ### for Nano NEO/AIR hotspot, Simplex, Raspberry Pi, BPi M2z,
 
-`sudo curl https://raw.github.com/VR2VYE/MMDVM_HS_firmware/master/install_fw_nanohs.sh | sudo sh`
+`sudo curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/v1.6.1/install_fw_nanohs.sh;
+ sudo chmod +x install_fw_nanohs.sh;
+ sudo ./install_fw_nanohs.sh;
+`
 
 
 ### for BPiM2 GPIO, Windows VMWare ttyUSB0, BNW NEO/AIR
