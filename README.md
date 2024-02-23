@@ -36,7 +36,7 @@ http://pi-star:4200 (Ver.WPSD)
 ```
 ![Flash-Duplex-Hatspot-Demo](https://github.com/VR2VYE/MMDVM_HS_firmware/assets/22002824/f54e9b40-575c-49d8-8f95-10a2e7dcbbb5)
 
-### for Duplex hotspot , Raspberry Pi, BPi M2z,
+#### for Duplex hotspot , Raspberry Pi, BPi M2z,
  
 ```
 sudo curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/v1.6.1/install_fw_duplex.sh;
@@ -44,7 +44,7 @@ sudo chmod +x install_fw_duplex.sh;
 sudo ./install_fw_duplex.sh;
 ```
 
-### for Simplex hotspot, Raspberry Pi, BPi M2z,
+#### for Simplex hotspot, Raspberry Pi, BPi M2z,
 
 ```
 sudo curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/v1.6.1/install_fw_hshat.sh;
@@ -53,7 +53,7 @@ sudo ./install_fw_hshat.sh;
 ```
 
 
-### for Nano NEO/AIR hotspot, Simplex, Raspberry Pi, BPi M2z,
+#### for Nano NEO/AIR hotspot, Simplex, Raspberry Pi, BPi M2z,
 
 ```
 sudo curl -OL https://github.com/VR2VYE/MMDVM_HS_firmware/releases/download/v1.6.1/install_fw_nanohs.sh;
@@ -62,11 +62,11 @@ sudo ./install_fw_nanohs.sh;
 ```
 
 
-### for BPiM2 GPIO, Windows VMWare ttyUSB0, BNW NEO/AIR
+#### for BPiM2 GPIO, Windows VMWare ttyUSB0, BNW NEO/AIR
 
 ...
 
-### for Repeater V3F4 STM32F446, 
+#### for Repeater V3F4 STM32F446, 
 
 See also `https://www.bi7jta.org/wiki/index.php?title=Main_Page#M17_Mode_FM_build_20230606`
 
