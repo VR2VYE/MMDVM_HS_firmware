@@ -20,7 +20,8 @@ The Simplex Hat for NanoPi NEO/AIR
 
 `sudo pistar-vyehsflash hs_hat`
 
-![Uploading Flash-NANO-PI-STAR_4.1.8-Demo.jpg…]()
+![Flash-NANO-PI-STAR_4 1 8-Demo](https://github.com/VR2VYE/MMDVM_HS_firmware/assets/22002824/04667877-f76f-40fd-88e3-8e33ed5bb0cc)
+
 
 
 ## Method 2: Use customized script, 
