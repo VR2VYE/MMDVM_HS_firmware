@@ -10,6 +10,7 @@ Quicy flash step,  open your webSSH
 http://pi-star:2222 (Ver.MW0MWZ), 
 http://pi-star:4200 (Ver.WPSD)
 ```
+![Flash-Duplex-Hatspot-Demo](https://github.com/VR2VYE/MMDVM_HS_firmware/assets/22002824/f54e9b40-575c-49d8-8f95-10a2e7dcbbb5)
 
 ### for Duplex hotspot , Raspberry Pi, BPi M2z,
  
