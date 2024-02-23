@@ -4,16 +4,22 @@ Support : MMDVM hotspot TCXO 14.7456MHz , Duplex, Simplex, Simplex(NanoNEO/AIR),
 
 ## Method 1: Use PI-STAR script, 
 Require OS : Official PI-STAR 4.1.8+
+
 `sudo pistar-vyehsflash hs_dual_hat`
+
 ![Flash-Duplex-PI-STAR_4 1 8-Demo](https://github.com/VR2VYE/MMDVM_HS_firmware/assets/22002824/08779dec-60be-4729-8b19-521a6c07a5a4)
 
 
 The Simplex Hat for Raspberry Pi, BPiM2z
+
 `sudo pistar-mmdvmhshatflash hs_hat`
+
 ![Flash-Simplex-PI-STAR_4 1 8-Demo](https://github.com/VR2VYE/MMDVM_HS_firmware/assets/22002824/799e4409-deea-4d3f-9058-ac587a83642f)
 
 The Simplex Hat for NanoPi NEO/AIR
-`sudo pistar-vyehsflash hs_dual_hat`
+
+`sudo pistar-vyehsflash hs_hat`
+
 ![Uploading Flash-NANO-PI-STAR_4.1.8-Demo.jpg…]()
 
 
